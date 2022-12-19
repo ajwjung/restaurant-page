@@ -13,8 +13,6 @@ const PageElements = (() => {
         return header;
     })
 
-    const newMain = MainElements.createMain();
-
     const CreateChefSection = () => {
         const chefsSection = MainElements.createSection("chefs");
         const chefsH2 = OtherElements.createH2("Meet the Chefs");
@@ -34,7 +32,6 @@ const PageElements = (() => {
         chefsSection.appendChild(chefsH2);
         chefsSection.appendChild(alfredoDiv);
         chefsSection.appendChild(remyDiv);
-        newMain.appendChild(chefsSection);
 
         return chefsSection;
     }
@@ -52,7 +49,6 @@ const PageElements = (() => {
         reviewsSection.appendChild(egoImg);
         reviewsSection.appendChild(reviewSpan);
         reviewsSection.appendChild(egoNamePara);
-        newMain.appendChild(reviewsSection);
 
         return reviewsSection;
     }
@@ -64,12 +60,14 @@ const Page = (() => {
     const content = document.querySelector("#content");
 
     const header = PageElements.CreateHeaderSection();
+    const main = MainElements.createMain();
     const chefsMain = PageElements.CreateChefSection();
     const reviewsMain = PageElements.CreateReviewSection();
-
+    
+    main.appendChild(chefsMain);
+    main.appendChild(reviewsMain);
     content.appendChild(header);
-    content.appendChild(chefsMain);
-    content.appendChild(reviewsMain);
+    content.appendChild(main);
 
     return { content };
 })();

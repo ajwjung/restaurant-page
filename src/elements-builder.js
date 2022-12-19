@@ -31,6 +31,12 @@ const OtherElements = (() => {
         return newH2;
     }
 
+    const createH3 = (text) => {
+        const newH3 = document.createElement("h3");
+        newH3.textContent = text;
+        return newH3;
+    }
+
     const createDiv = (className) => {
         const newDiv = document.createElement("div");
         newDiv.classList.add(className);
@@ -55,7 +61,7 @@ const OtherElements = (() => {
         return newSpan;
     }
 
-    return { createH1, createH2, createDiv,
+    return { createH1, createH2, createH3, createDiv,
         createImage, createPara, createSpan }
 })();
 

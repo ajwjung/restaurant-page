@@ -75,4 +75,3 @@ const Page = (() => {
 })();
 
 export default Page;
-export { MainElements, OtherElements };

@@ -100,7 +100,7 @@ const MenuElements = (() => {
 
 
 const Menu = (() => {
-    const content = Page.content;
+    const content = document.querySelector("#content");
 
     const menuHeader = MenuElements.createMenuHeader();
     const menuMain = MenuElements.createMenuMain();

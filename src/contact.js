@@ -32,7 +32,7 @@ const ContactElements = (() => {
 })();
 
 const Contact = (() => {
-    const content = Page.content;
+    const content = document.querySelector("#content");
 
     const contactHeader = ContactElements.createContactHeader();
     const contactMain = ContactElements.createContactMain();

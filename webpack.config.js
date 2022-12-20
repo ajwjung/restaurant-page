@@ -5,11 +5,8 @@ module.exports = {
     mode: "development",
     entry: {
         index: "./src/index.js",
-        pageLoad: "./src/page-load.js",
-        menu: "./src/menu.js",
-        contact: "./src/contact.js",
-        elementsBuilder: "./src/elements-builder.js",
     },
+    devtool: "inline-source-map",
     plugins: [
         new HtmlWebpackPlugin({
             title: "Restaurant Page",
@@ -17,7 +14,7 @@ module.exports = {
         }),
     ],
     output: {
-        filename: "[name].bundle.js",
+        filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },

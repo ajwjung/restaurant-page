@@ -20,24 +20,19 @@ h3 {
     margin: var(--header-margin);
 }
 
-.header-line,
-.first-line,
-.second-line {
-    height: 1px;
+hr {
+    border-width: 0;
     background: var(--font-clr);
 }
 
 .header-line {
     width: 85%;
+    height: 2px;
 }
 
-.dividers {
-    width: 100%;
-}
-
-.first-line,
-.second-line {
+.divider {
     width: 40%;
+    height: 1px;
 }
 
 .chefs,

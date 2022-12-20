@@ -45,7 +45,7 @@ const PageElements = (() => {
         // const logoWrapper = OtherElements.createDiv("logo-container");
         // restaurantLogo.setAttribute("id", "gusteau-logo");
         const restaurantName = OtherElements.createH1("Gusteau's");
-        const headerLine = OtherElements.createDiv("header-line");
+        const headerLine = OtherElements.createLine("header-line");
         
         // logoWrapper.appendChild(restaurantLogo);
         // header.appendChild(logoWrapper);
@@ -124,19 +124,13 @@ const Page = (() => {
     const nav = Tabs.createTabSection();
     const reviewsMain = PageElements.createReviewSection();
     const chefsMain = PageElements.createChefSection();
-
-    const firstDivider = OtherElements.createDiv("dividers");
-    const firstLine = OtherElements.createDiv("first-line");
-    const secondDivider = OtherElements.createDiv("dividers");
-    const secondLine = OtherElements.createDiv("second-line");
+    const firstLine = OtherElements.createLine("divider");
+    const secondLine = OtherElements.createLine("divider");
     
-    firstDivider.appendChild(firstLine);
-    secondDivider.appendChild(secondLine);
-
     header.appendChild(nav);
-    main.appendChild(firstDivider);
+    main.appendChild(firstLine);
     main.appendChild(reviewsMain);
-    main.appendChild(secondDivider);
+    main.appendChild(secondLine);
     main.appendChild(chefsMain);
     content.appendChild(header);
     content.appendChild(main);

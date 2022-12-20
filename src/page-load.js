@@ -8,11 +8,13 @@ const PageElements = (() => {
     const createHeaderSection = () => {
         const header = MainElements.createHeader();
 
-        const restaurantLogo = OtherElements.createImage(Gusteau);
-        restaurantLogo.setAttribute("id", "gusteau-logo");
+        // const restaurantLogo = OtherElements.createImage(Gusteau);
+        // const logoWrapper = OtherElements.createDiv("logo-container");
+        // restaurantLogo.setAttribute("id", "gusteau-logo");
         const restaurantName = OtherElements.createH1("Gusteau's");
         
-        header.appendChild(restaurantLogo);
+        // logoWrapper.appendChild(restaurantLogo);
+        // header.appendChild(logoWrapper);
         header.appendChild(restaurantName);
 
         return header;
@@ -21,24 +23,32 @@ const PageElements = (() => {
     const createChefSection = () => {
         const chefsSection = MainElements.createSection("chefs");
         const chefsH2 = OtherElements.createH2("Meet the Chefs");
+        const chefsContainer = OtherElements.createDiv("chefs-info");
     
         const alfredoDiv = OtherElements.createDiv("alfredo");
+        const alfredoContainer = OtherElements.createDiv("alfredo-container");
         const alfredoImg = OtherElements.createImage(Alfredo);
-        alfredoImg.setAttribute("id", "alfredo");
+        alfredoImg.setAttribute("id", "alfredo-img");
         const alfredoNamePara = OtherElements.createPara("Alfredo Linguini");
     
         const remyDiv = OtherElements.createDiv("remy");
+        const remyContainer = OtherElements.createDiv("remy-container");
         const remyImg = OtherElements.createImage(Remy);
-        remyImg.setAttribute("id", "remy");
+        remyImg.setAttribute("id", "remy-img");
         const remyNamePara = OtherElements.createPara("Remy");
     
-        alfredoDiv.appendChild(alfredoImg);
+        alfredoContainer.appendChild(alfredoImg);
+        alfredoDiv.appendChild(alfredoContainer);
         alfredoDiv.appendChild(alfredoNamePara);
-        remyDiv.appendChild(remyImg);
+        remyContainer.appendChild(remyImg);
+        remyDiv.appendChild(remyContainer);
         remyDiv.appendChild(remyNamePara);
+
+        chefsContainer.appendChild(alfredoDiv);
+        chefsContainer.appendChild(remyDiv);
+
         chefsSection.appendChild(chefsH2);
-        chefsSection.appendChild(alfredoDiv);
-        chefsSection.appendChild(remyDiv);
+        chefsSection.appendChild(chefsContainer);
 
         return chefsSection;
     }
@@ -47,16 +57,22 @@ const PageElements = (() => {
         const reviewsSection = MainElements.createSection("reviews");
 
         const reviewsH2 = OtherElements.createH2("What the Critics Say");
+        const reviewsContainer = OtherElements.createDiv("reviews-container");
+        const egoDiv = OtherElements.createDiv("ego");
+        const egoContainer = OtherElements.createDiv("ego-container");
         const egoImg = OtherElements.createImage(Ego);
-        egoImg.setAttribute("id", "ego");
+        egoImg.setAttribute("id", "ego-img");
+        const egoNamePara = OtherElements.createPara("Anton Ego");
         const egoReview = "I experienced something new: an extraordinary meal from a singularly unexpected source. [...] It is difficult to imagine more humble origins than those of the genius now cooking at Gusteau's who is, in this critic's opinion, nothing less than the finest chef in France. I will be returning to Gusteau's soon, hungry for more.";
         const reviewSpan = OtherElements.createSpan(egoReview);
-        const egoNamePara = OtherElements.createPara("Anton Ego");
 
         reviewsSection.appendChild(reviewsH2);
-        reviewsSection.appendChild(egoImg);
-        reviewsSection.appendChild(reviewSpan);
-        reviewsSection.appendChild(egoNamePara);
+        egoContainer.appendChild(egoImg);
+        egoDiv.appendChild(egoContainer);
+        egoDiv.appendChild(egoNamePara);
+        reviewsContainer.appendChild(egoDiv);
+        reviewsContainer.appendChild(reviewSpan);
+        reviewsSection.appendChild(reviewsContainer);
 
         return reviewsSection;
     }

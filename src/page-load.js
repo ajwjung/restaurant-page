@@ -12,11 +12,13 @@ const PageElements = (() => {
         // const logoWrapper = OtherElements.createDiv("logo-container");
         // restaurantLogo.setAttribute("id", "gusteau-logo");
         const restaurantName = OtherElements.createH1("Gusteau's");
+        const headerLine = OtherElements.createDiv("header-line");
         
         // logoWrapper.appendChild(restaurantLogo);
         // header.appendChild(logoWrapper);
         header.appendChild(restaurantName);
-        
+        header.appendChild(headerLine);
+
         return header;
     }
 
@@ -88,8 +90,13 @@ const Page = (() => {
     const main = MainElements.createMain();
     const reviewsMain = PageElements.createReviewSection();
     const chefsMain = PageElements.createChefSection();
+    const firstLine = OtherElements.createDiv("first-line");
+    const secondLine = OtherElements.createDiv("second-line");
+
     
+    main.appendChild(firstLine);
     main.appendChild(reviewsMain);
+    main.appendChild(secondLine);
     main.appendChild(chefsMain);
     content.appendChild(header);
     content.appendChild(main);

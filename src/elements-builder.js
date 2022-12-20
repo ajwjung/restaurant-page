@@ -4,6 +4,11 @@ const MainElements = (() => {
         return newHeader;
     }
 
+    const createNav = () => {
+        const newNav = document.createElement("nav");
+        return newNav;
+    }
+
     const createMain = () => {
         const newMain = document.createElement("main");
         return newMain;
@@ -15,7 +20,7 @@ const MainElements = (() => {
         return newSection;
     }
 
-    return { createHeader, createMain, createSection }
+    return { createHeader, createNav, createMain, createSection }
 })();
 
 const OtherElements = (() => {
@@ -61,8 +66,16 @@ const OtherElements = (() => {
         return newSpan;
     }
 
+    const createBtn = (text, id) => {
+        const newBtn = document.createElement("button");
+        newBtn.setAttribute("type", "button");
+        newBtn.textContent = text;
+        newBtn.setAttribute("id", id);
+        return newBtn;
+    }
+
     return { createH1, createH2, createH3, createDiv,
-        createImage, createPara, createSpan }
+        createImage, createPara, createSpan, createBtn }
 })();
 
 export { MainElements, OtherElements };

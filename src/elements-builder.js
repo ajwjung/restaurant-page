@@ -66,6 +66,12 @@ const OtherElements = (() => {
         return newSpan;
     }
 
+    const createLine = (className) => {
+        const newLine = document.createElement("hr");
+        newLine.classList.add(className);
+        return newLine;
+    }
+
     const createBtn = (text, id) => {
         const newBtn = document.createElement("button");
         newBtn.setAttribute("type", "button");
@@ -74,8 +80,8 @@ const OtherElements = (() => {
         return newBtn;
     }
 
-    return { createH1, createH2, createH3, createDiv,
-        createImage, createPara, createSpan, createBtn }
+    return { createH1, createH2, createH3, createDiv, createImage,
+        createPara, createSpan, createLine, createBtn }
 })();
 
 export { MainElements, OtherElements };

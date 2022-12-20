@@ -16,7 +16,7 @@ const PageElements = (() => {
         // logoWrapper.appendChild(restaurantLogo);
         // header.appendChild(logoWrapper);
         header.appendChild(restaurantName);
-
+        
         return header;
     }
 
@@ -86,11 +86,11 @@ const Page = (() => {
 
     const header = PageElements.createHeaderSection();
     const main = MainElements.createMain();
-    const chefsMain = PageElements.createChefSection();
     const reviewsMain = PageElements.createReviewSection();
+    const chefsMain = PageElements.createChefSection();
     
-    main.appendChild(chefsMain);
     main.appendChild(reviewsMain);
+    main.appendChild(chefsMain);
     content.appendChild(header);
     content.appendChild(main);
 

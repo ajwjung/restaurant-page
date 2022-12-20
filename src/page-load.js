@@ -63,15 +63,16 @@ const PageElements = (() => {
         const egoImg = OtherElements.createImage(Ego);
         egoImg.setAttribute("id", "ego-img");
         const egoNamePara = OtherElements.createPara("Anton Ego");
-        const egoReview = "I experienced something new: an extraordinary meal from a singularly unexpected source. [...] It is difficult to imagine more humble origins than those of the genius now cooking at Gusteau's who is, in this critic's opinion, nothing less than the finest chef in France. I will be returning to Gusteau's soon, hungry for more.";
+        const egoReview = `"I experienced something new: an extraordinary meal from a singularly unexpected source. [...] It is difficult to imagine more humble origins than those of the genius now cooking at Gusteau's who is, in this critic's opinion, nothing less than the finest chef in France. I will be returning to Gusteau's soon, hungry for more."`;
         const reviewSpan = OtherElements.createSpan(egoReview);
+        reviewSpan.setAttribute("id", "ego-review")
 
         reviewsSection.appendChild(reviewsH2);
         egoContainer.appendChild(egoImg);
         egoDiv.appendChild(egoContainer);
         egoDiv.appendChild(egoNamePara);
-        reviewsContainer.appendChild(egoDiv);
         reviewsContainer.appendChild(reviewSpan);
+        reviewsContainer.appendChild(egoDiv);
         reviewsSection.appendChild(reviewsContainer);
 
         return reviewsSection;

@@ -1,10 +1,14 @@
 import { MainElements, OtherElements } from "./elements-builder";
+import Gusteau from "./imgs/gusteaus.png";
+import Alfredo from "./imgs/alfredo-linguini.png";
+import Remy from "./imgs/remy.png";
+import Ego from "./imgs/anton-ego.png";
 
 const PageElements = (() => {
     const CreateHeaderSection = (() => {
         const header = MainElements.createHeader();
 
-        const restaurantLogo = OtherElements.createImage("../src/imgs/gusteaus.png");
+        const restaurantLogo = OtherElements.createImage(Gusteau);
         const restaurantName = OtherElements.createH1("Gusteau's");
         
         header.appendChild(restaurantLogo);
@@ -18,11 +22,11 @@ const PageElements = (() => {
         const chefsH2 = OtherElements.createH2("Meet the Chefs");
     
         const alfredoDiv = OtherElements.createDiv("alfredo");
-        const alfredoImg = OtherElements.createImage("../src/imgs/alfredo-linguini.png");
+        const alfredoImg = OtherElements.createImage(Alfredo);
         const alfredoNamePara = OtherElements.createPara("Alfredo Linguini");
     
         const remyDiv = OtherElements.createDiv("remy");
-        const remyImg = OtherElements.createImage("../src/imgs/remy.png");
+        const remyImg = OtherElements.createImage(Remy);
         const remyNamePara = OtherElements.createPara("Remy");
     
         alfredoDiv.appendChild(alfredoImg);
@@ -40,7 +44,7 @@ const PageElements = (() => {
         const reviewsSection = MainElements.createSection("reviews");
 
         const reviewsH2 = OtherElements.createH2("What the Critics Say");
-        const egoImg = OtherElements.createImage("../src/imgs/anton-ego.png");
+        const egoImg = OtherElements.createImage(Ego);
         const egoReview = "I experienced something new: an extraordinary meal from a singularly unexpected source. [...] It is difficult to imagine more humble origins than those of the genius now cooking at Gusteau's who is, in this critic's opinion, nothing less than the finest chef in France. I will be returning to Gusteau's soon, hungry for more.";
         const reviewSpan = OtherElements.createSpan(egoReview);
         const egoNamePara = OtherElements.createPara("Anton Ego");

@@ -124,13 +124,19 @@ const Page = (() => {
     const nav = Tabs.createTabSection();
     const reviewsMain = PageElements.createReviewSection();
     const chefsMain = PageElements.createChefSection();
+
+    const firstDivider = OtherElements.createDiv("dividers");
     const firstLine = OtherElements.createDiv("first-line");
+    const secondDivider = OtherElements.createDiv("dividers");
     const secondLine = OtherElements.createDiv("second-line");
     
+    firstDivider.appendChild(firstLine);
+    secondDivider.appendChild(secondLine);
+
     header.appendChild(nav);
-    main.appendChild(firstLine);
+    main.appendChild(firstDivider);
     main.appendChild(reviewsMain);
-    main.appendChild(secondLine);
+    main.appendChild(secondDivider);
     main.appendChild(chefsMain);
     content.appendChild(header);
     content.appendChild(main);

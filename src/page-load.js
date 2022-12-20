@@ -9,6 +9,7 @@ const PageElements = (() => {
         const header = MainElements.createHeader();
 
         const restaurantLogo = OtherElements.createImage(Gusteau);
+        restaurantLogo.setAttribute("id", "gusteau-logo");
         const restaurantName = OtherElements.createH1("Gusteau's");
         
         header.appendChild(restaurantLogo);
@@ -23,10 +24,12 @@ const PageElements = (() => {
     
         const alfredoDiv = OtherElements.createDiv("alfredo");
         const alfredoImg = OtherElements.createImage(Alfredo);
+        alfredoImg.setAttribute("id", "alfredo");
         const alfredoNamePara = OtherElements.createPara("Alfredo Linguini");
     
         const remyDiv = OtherElements.createDiv("remy");
         const remyImg = OtherElements.createImage(Remy);
+        remyImg.setAttribute("id", "remy");
         const remyNamePara = OtherElements.createPara("Remy");
     
         alfredoDiv.appendChild(alfredoImg);
@@ -45,6 +48,7 @@ const PageElements = (() => {
 
         const reviewsH2 = OtherElements.createH2("What the Critics Say");
         const egoImg = OtherElements.createImage(Ego);
+        egoImg.setAttribute("id", "ego");
         const egoReview = "I experienced something new: an extraordinary meal from a singularly unexpected source. [...] It is difficult to imagine more humble origins than those of the genius now cooking at Gusteau's who is, in this critic's opinion, nothing less than the finest chef in France. I will be returning to Gusteau's soon, hungry for more.";
         const reviewSpan = OtherElements.createSpan(egoReview);
         const egoNamePara = OtherElements.createPara("Anton Ego");

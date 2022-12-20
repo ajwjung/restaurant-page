@@ -6,8 +6,11 @@ const ContactElements = (() => {
         const header = MainElements.createHeader();
         
         const contactH1 = OtherElements.createH1("Contact Us");
-        header.appendChild(contactH1);
+        const headerLine = OtherElements.createLine("header-line");
 
+        header.appendChild(contactH1);
+        header.appendChild(headerLine);
+        
         return header;
     }
 

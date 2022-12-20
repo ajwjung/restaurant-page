@@ -6,7 +6,10 @@ const MenuElements = (() => {
         const header = MainElements.createHeader();
     
         const menuH1 = OtherElements.createH1("Gusteau's Menu");
+        const headerLine = OtherElements.createLine("header-line");
+        
         header.appendChild(menuH1);
+        header.appendChild(headerLine);
 
         return header;
     }

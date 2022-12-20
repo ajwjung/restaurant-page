@@ -127,7 +127,7 @@ const Page = (() => {
     const firstLine = OtherElements.createDiv("first-line");
     const secondLine = OtherElements.createDiv("second-line");
     
-    main.appendChild(nav);
+    header.appendChild(nav);
     main.appendChild(firstLine);
     main.appendChild(reviewsMain);
     main.appendChild(secondLine);

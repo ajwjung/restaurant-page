@@ -1,0 +1,80 @@
+:root {
+    --main-bg-clr: rgb(12, 22, 53);
+    --img-bg-clr: rgb(68, 0, 20);
+    --font-clr: rgb(238, 173, 14);
+    --quote-font-size: 1.2rem;
+}
+
+body {
+    background: var(--main-bg-clr);
+    color: var(--font-clr);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.chefs,
+.reviews {
+    width: 100%;
+}
+
+.chefs-info,
+.reviews-container,
+.reviews {
+    display: flex;
+    justify-content: center;
+}
+
+.chefs-info,
+.reviews-container {
+    align-items: center;
+    gap: 50px;
+}
+
+.reviews {
+    flex-direction: column;
+    align-items: center;
+}
+
+.alfredo,
+.remy,
+.ego {
+    text-align: center;
+}
+
+.alfredo-container,
+.remy-container,
+.ego-container {
+    height: 150px;
+    width: 150px;
+    background-color: var(--img-bg-clr);
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+#alfredo-img {
+    height: 350px;
+    transform: translateX(-22%) translateY(-5%);
+}
+
+#remy-img {
+    height: 250px;
+    transform: translateX(-40%) translateY(5%);
+}
+
+.reviews-container {
+    width: 50%;
+}
+
+#ego-img {
+    height: 250px;
+    transform: translateX(-18%);
+    flex: 1;
+}
+
+#ego-review {
+    font-style: italic;
+    font-size: var(--quote-font-size);
+}

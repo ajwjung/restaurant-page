@@ -3,38 +3,46 @@
     --img-bg-clr: rgb(68, 0, 20);
     --font-clr: rgb(238, 173, 14);
     --quote-font-size: 1.2rem;
+    --header-margin: 2rem 0;
 }
 
 body {
+    height: 100%;
+    width: 0 auto;
     background: var(--main-bg-clr);
     color: var(--font-clr);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
+    margin: var(--header-margin);
 }
 
 .chefs,
 .reviews {
     width: 100%;
+    margin: 5% 0;
 }
 
+header,
 .chefs-info,
 .reviews-container,
 .reviews {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .chefs-info,
 .reviews-container {
-    align-items: center;
-    gap: 50px;
+    gap: 10%;
 }
 
+header,
 .reviews {
     flex-direction: column;
-    align-items: center;
 }
 
 .alfredo,

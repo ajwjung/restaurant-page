@@ -20,6 +20,26 @@ h3 {
     margin: var(--header-margin);
 }
 
+.header-line,
+.first-line,
+.second-line {
+    height: 1px;
+    background: var(--font-clr);
+}
+
+.header-line {
+    width: 85%;
+}
+
+.dividers {
+    width: 100%;
+}
+
+.first-line,
+.second-line {
+    width: 40%;
+}
+
 .chefs,
 .reviews {
     width: 100%;
@@ -27,6 +47,7 @@ h3 {
 }
 
 header,
+.dividers,
 .chefs-info,
 .reviews-container,
 .reviews {
@@ -41,6 +62,7 @@ header,
 }
 
 header,
+main,
 .reviews {
     flex-direction: column;
 }

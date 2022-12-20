@@ -5,7 +5,7 @@ import Remy from "./imgs/remy.png";
 import Ego from "./imgs/anton-ego.png";
 
 const PageElements = (() => {
-    const CreateHeaderSection = (() => {
+    const createHeaderSection = () => {
         const header = MainElements.createHeader();
 
         const restaurantLogo = OtherElements.createImage(Gusteau);
@@ -16,9 +16,9 @@ const PageElements = (() => {
         header.appendChild(restaurantName);
 
         return header;
-    })
+    }
 
-    const CreateChefSection = () => {
+    const createChefSection = () => {
         const chefsSection = MainElements.createSection("chefs");
         const chefsH2 = OtherElements.createH2("Meet the Chefs");
     
@@ -43,7 +43,7 @@ const PageElements = (() => {
         return chefsSection;
     }
 
-    const CreateReviewSection = () => {
+    const createReviewSection = () => {
         const reviewsSection = MainElements.createSection("reviews");
 
         const reviewsH2 = OtherElements.createH2("What the Critics Say");
@@ -61,23 +61,22 @@ const PageElements = (() => {
         return reviewsSection;
     }
 
-    return { CreateHeaderSection, CreateChefSection, CreateReviewSection };
+    return { createHeaderSection, createChefSection, createReviewSection };
 })();
 
 const Page = (() => {
     const content = document.querySelector("#content");
 
-    const header = PageElements.CreateHeaderSection();
+    const header = PageElements.createHeaderSection();
     const main = MainElements.createMain();
-    const chefsMain = PageElements.CreateChefSection();
-    const reviewsMain = PageElements.CreateReviewSection();
+    const chefsMain = PageElements.createChefSection();
+    const reviewsMain = PageElements.createReviewSection();
     
     main.appendChild(chefsMain);
     main.appendChild(reviewsMain);
     content.appendChild(header);
     content.appendChild(main);
 
-    return { content };
 })();
 
 export default Page;

@@ -4,6 +4,39 @@ import Alfredo from "./imgs/alfredo-linguini.png";
 import Remy from "./imgs/remy.png";
 import Ego from "./imgs/anton-ego.png";
 
+const Tabs = (() => {
+    const createHomeBtn = () => {
+        const homeTab = OtherElements.createBtn("Home", "home-tab");
+        return homeTab;
+    }
+
+    const createMenuBtn = () => {
+        const menuTab = OtherElements.createBtn("Menu", "menu-tab");
+        return menuTab;
+    }
+
+    const createContactBtn = () => {
+        const contactTab = OtherElements.createBtn("Contact Us", "contact-tab");
+        return contactTab;
+    }
+
+    const createTabSection = () => {
+        const navSection = MainElements.createNav("tabs");
+
+        const homeTab = createHomeBtn();
+        const menuTab = createMenuBtn();
+        const contactTab = createContactBtn();
+
+        navSection.appendChild(homeTab);
+        navSection.appendChild(menuTab);
+        navSection.appendChild(contactTab);
+
+        return navSection;
+    }
+
+    return { createTabSection };
+})();
+
 const PageElements = (() => {
     const createHeaderSection = () => {
         const header = MainElements.createHeader();
@@ -88,12 +121,13 @@ const Page = (() => {
 
     const header = PageElements.createHeaderSection();
     const main = MainElements.createMain();
+    const nav = Tabs.createTabSection();
     const reviewsMain = PageElements.createReviewSection();
     const chefsMain = PageElements.createChefSection();
     const firstLine = OtherElements.createDiv("first-line");
     const secondLine = OtherElements.createDiv("second-line");
-
     
+    main.appendChild(nav);
     main.appendChild(firstLine);
     main.appendChild(reviewsMain);
     main.appendChild(secondLine);

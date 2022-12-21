@@ -2,13 +2,15 @@
     --main-bg-clr: rgb(12, 22, 53);
     --img-bg-clr: rgb(68, 0, 20);
     --font-clr: rgb(238, 173, 14);
+    --h1-font-size: 3rem;
+    --h2-font-size: 2rem;
     --quote-font-size: 1.2rem;
     --header-margin: 2rem 0;
 }
 
 body {
     height: 100%;
-    width: 0 auto;
+    margin: 0 auto;
     background: var(--main-bg-clr);
     color: var(--font-clr);
 }
@@ -18,6 +20,18 @@ h2,
 h3 {
     text-align: center;
     margin: var(--header-margin);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--quote-font-size);
 }
 
 hr {
@@ -35,6 +49,8 @@ hr {
     height: 1px;
 }
 
+/* Main Page */
+
 .chefs,
 .reviews {
     width: 100%;
@@ -44,20 +60,19 @@ hr {
 header,
 .dividers,
 .chefs-info,
-.reviews-container,
-.reviews {
+.reviews,
+.reviews-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.chefs-info,
-.reviews-container {
+.reviews-container,
+.chefs-info {
     gap: 10%;
 }
 
 header,
-main,
 .reviews {
     flex-direction: column;
 }
@@ -79,6 +94,20 @@ main,
     overflow: hidden;
 }
 
+.reviews-container {
+    width: 50%;
+}
+
+#ego-img {
+    height: 250px;
+    transform: translateX(-18%);
+}
+
+#ego-review {
+    font-style: italic;
+    font-size: var(--quote-font-size);
+}
+
 #alfredo-img {
     height: 350px;
     transform: translateX(-22%) translateY(-5%);
@@ -87,19 +116,4 @@ main,
 #remy-img {
     height: 250px;
     transform: translateX(-40%) translateY(5%);
-}
-
-.reviews-container {
-    width: 50%;
-}
-
-#ego-img {
-    height: 250px;
-    transform: translateX(-18%);
-    flex: 1;
-}
-
-#ego-review {
-    font-style: italic;
-    font-size: var(--quote-font-size);
 }

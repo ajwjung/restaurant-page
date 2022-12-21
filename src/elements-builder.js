@@ -24,10 +24,12 @@ const MainElements = (() => {
         const newFooter = document.createElement("footer");
 
         const footerLine = OtherElements.createLine("footer-line");
+        const noteContainer = OtherElements.createDiv("footer-container");
         const footerNote = OtherElements.createPara("Copyright © 2022 Amy Jung");
 
+        noteContainer.appendChild(footerNote);
         newFooter.appendChild(footerLine);
-        newFooter.appendChild(footerNote);
+        newFooter.appendChild(noteContainer);
 
         return newFooter;
     }

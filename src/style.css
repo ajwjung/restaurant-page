@@ -7,6 +7,7 @@
     --quote-font-size: 1.2rem;
     --header-margin: 2rem 0;
     --nav-font-size: 1rem;
+    --full-width: 100vw;
 }
 
 * {
@@ -42,9 +43,11 @@ hr {
     background: var(--font-clr);
 }
 
-.header-line {
+.header-line,
+.footer-line {
     width: 85%;
     height: 2px;
+    line-height: 50px;
 }
 
 .divider {
@@ -54,9 +57,39 @@ hr {
 
 /* Main Page */
 
+header,
+nav,
+footer,
 .chefs,
 .reviews {
-    width: 100%;
+    width: var(--full-width);
+}
+
+header {
+    height: 30vh;
+}
+
+nav {
+    height: 30%;
+    margin: 1% 0;
+    gap: 4rem;
+}
+
+main {
+    margin: var(--header-margin);
+}
+
+footer {
+    height: 15vh;
+    text-align: center;
+}
+
+.footer-container {
+    height: 85%
+}
+
+.chefs,
+.reviews {
     margin: 5% 0;
 }
 
@@ -67,22 +100,11 @@ nav,
 .reviews,
 .reviews-container,
 .menu-item,
-.contact-info {
+.contact-info,
+.footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-header {
-    height: 30vh;
-    width: 100vw;
-}
-
-nav {
-    height: 30%;
-    width: 100vw;
-    margin: 1% 0;
-    gap: 4rem;
 }
 
 .btn-container,
@@ -168,7 +190,7 @@ header,
 .entrees,
 .desserts,
 .contact-info {
-    width: 100%;
+    width: var(--full-width);
 }
 
 .menu-item > p,

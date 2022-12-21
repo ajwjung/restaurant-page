@@ -6,18 +6,27 @@ import Ego from "./imgs/anton-ego.png";
 
 const Tabs = (() => {
     const createHomeBtn = () => {
+        const homeTabDiv = OtherElements.createDiv("btn-container");
         const homeTab = OtherElements.createBtn("Home", "home-tab");
-        return homeTab;
+        homeTabDiv.appendChild(homeTab);
+
+        return homeTabDiv;
     }
 
     const createMenuBtn = () => {
+        const menuTabDiv = OtherElements.createDiv("btn-container");
         const menuTab = OtherElements.createBtn("Menu", "menu-tab");
-        return menuTab;
+        menuTabDiv.appendChild(menuTab);
+
+        return menuTabDiv;
     }
 
     const createContactBtn = () => {
+        const contactTabDiv = OtherElements.createDiv("btn-container");
         const contactTab = OtherElements.createBtn("Contact Us", "contact-tab");
-        return contactTab;
+        contactTabDiv.appendChild(contactTab);
+
+        return contactTabDiv;
     }
 
     const createTabSection = () => {
@@ -63,13 +72,15 @@ const PageElements = (() => {
         // const restaurantLogo = OtherElements.createImage(Gusteau);
         // const logoWrapper = OtherElements.createDiv("logo-container");
         // restaurantLogo.setAttribute("id", "gusteau-logo");
-        const restaurantName = OtherElements.createH1("Gusteau's");
+        const navBar = Tabs.createTabSection();
         const headerLine = OtherElements.createLine("header-line");
+        const restaurantName = OtherElements.createH1("Gusteau's");
         
         // logoWrapper.appendChild(restaurantLogo);
         // header.appendChild(logoWrapper);
-        header.appendChild(restaurantName);
+        header.appendChild(navBar);
         header.appendChild(headerLine);
+        header.appendChild(restaurantName);
 
         return header;
     }
@@ -122,13 +133,11 @@ const Page = (() => {
 
     const header = PageElements.createHeaderSection();
     const main = MainElements.createMain();
-    const nav = Tabs.createTabSection();
     const firstLine = OtherElements.createLine("divider");
     const reviewsMain = PageElements.createReviewSection();
     const secondLine = OtherElements.createLine("divider");
     const chefsMain = PageElements.createChefSection();
     
-    header.appendChild(nav);
     main.appendChild(firstLine);
     main.appendChild(reviewsMain);
     main.appendChild(secondLine);

@@ -1,4 +1,3 @@
-import Page from "./page-load";
 import { MainElements, OtherElements } from "./elements-builder";
 
 const ContactElements = (() => {

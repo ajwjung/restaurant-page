@@ -1,5 +1,4 @@
 import { MainElements, OtherElements } from "./elements-builder";
-import Gusteau from "./imgs/gusteaus.png";
 import Alfredo from "./imgs/alfredo-linguini.png";
 import Remy from "./imgs/remy.png";
 import Ego from "./imgs/anton-ego.png";

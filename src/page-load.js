@@ -137,6 +137,7 @@ const Page = (() => {
     const reviewsMain = PageElements.createReviewSection();
     const secondLine = OtherElements.createLine("divider");
     const chefsMain = PageElements.createChefSection();
+    const footer = MainElements.createFooter();
     
     main.appendChild(firstLine);
     main.appendChild(reviewsMain);
@@ -144,6 +145,7 @@ const Page = (() => {
     main.appendChild(chefsMain);
     content.appendChild(header);
     content.appendChild(main);
+    content.appendChild(footer);
 
 })();
 

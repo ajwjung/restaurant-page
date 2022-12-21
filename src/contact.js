@@ -41,9 +41,11 @@ const Contact = (() => {
 
     const contactHeader = ContactElements.createContactHeader();
     const contactMain = ContactElements.createContactMain();
+    const contactFooter = MainElements.createFooter();
     
     content.appendChild(contactHeader);
     content.appendChild(contactMain);
+    content.appendChild(contactFooter);
 })();
 
 export default Contact;

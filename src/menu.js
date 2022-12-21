@@ -107,9 +107,11 @@ const Menu = (() => {
 
     const menuHeader = MenuElements.createMenuHeader();
     const menuMain = MenuElements.createMenuMain();
+    const menuFooter = MainElements.createFooter();
 
     content.appendChild(menuHeader);
     content.appendChild(menuMain);
+    content.appendChild(menuFooter);
 
 })();
 

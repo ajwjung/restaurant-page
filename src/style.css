@@ -1,18 +1,22 @@
 :root {
     --main-bg-clr: rgb(12, 22, 53);
     --img-bg-clr: rgb(68, 0, 20);
-    --font-clr: rgb(238, 173, 14);
+    --font-clr: rgb(226, 175, 64);
     --h1-font-size: 3rem;
     --h2-font-size: 2rem;
     --quote-font-size: 1.2rem;
     --header-margin: 2rem 0;
+    --nav-font-size: 1rem;
+}
+
+* {
+    color: var(--font-clr);
 }
 
 body {
     height: 100vh;
     margin: 0 auto;
     background: var(--main-bg-clr);
-    color: var(--font-clr);
 }
 
 h1,
@@ -58,6 +62,7 @@ hr {
 }
 
 header,
+nav,
 .dividers,
 .chefs-info,
 .reviews,
@@ -67,6 +72,42 @@ header,
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+header {
+    height: 30vh;
+    width: 100vw;
+}
+
+nav {
+    height: 30%;
+    width: 100vw;
+    margin: 1% 0;
+    gap: 4rem;
+}
+
+.btn-container,
+.btn-container:hover {
+    height: 50px;
+    width: 135px;
+    box-sizing: border-box;
+}
+
+.btn-container:hover {
+    border-bottom: 2px solid var(--font-clr);
+}
+
+#home-tab,
+#menu-tab,
+#contact-tab {
+    height: 50px;
+    width: 135px;
+    background: transparent;
+    border: 0;
+    border-radius: 10px;
+    font-size: var(--nav-font-size);
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .reviews-container,

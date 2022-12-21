@@ -1,14 +1,16 @@
-import { MainElements, OtherElements } from "./elements-builder";
+import { MainElements, OtherElements, Tabs } from "./elements-builder";
 
 const MenuElements = (() => {
     const createMenuHeader = () => {
         const header = MainElements.createHeader();
     
-        const menuH1 = OtherElements.createH1("Gusteau's Menu");
+        const menuNavBar = Tabs.createTabSection();
         const headerLine = OtherElements.createLine("header-line");
+        const menuH1 = OtherElements.createH1("Gusteau's Menu");
         
-        header.appendChild(menuH1);
+        header.appendChild(menuNavBar);
         header.appendChild(headerLine);
+        header.appendChild(menuH1);
 
         return header;
     }

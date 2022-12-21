@@ -1,49 +1,7 @@
-import { MainElements, OtherElements } from "./elements-builder";
+import { MainElements, OtherElements, Tabs } from "./elements-builder";
 import Alfredo from "./imgs/alfredo-linguini.png";
 import Remy from "./imgs/remy.png";
 import Ego from "./imgs/anton-ego.png";
-
-const Tabs = (() => {
-    const createHomeBtn = () => {
-        const homeTabDiv = OtherElements.createDiv("btn-container");
-        const homeTab = OtherElements.createBtn("Home", "home-tab");
-        homeTabDiv.appendChild(homeTab);
-
-        return homeTabDiv;
-    }
-
-    const createMenuBtn = () => {
-        const menuTabDiv = OtherElements.createDiv("btn-container");
-        const menuTab = OtherElements.createBtn("Menu", "menu-tab");
-        menuTabDiv.appendChild(menuTab);
-
-        return menuTabDiv;
-    }
-
-    const createContactBtn = () => {
-        const contactTabDiv = OtherElements.createDiv("btn-container");
-        const contactTab = OtherElements.createBtn("Contact Us", "contact-tab");
-        contactTabDiv.appendChild(contactTab);
-
-        return contactTabDiv;
-    }
-
-    const createTabSection = () => {
-        const navSection = MainElements.createNav("tabs");
-
-        const homeTab = createHomeBtn();
-        const menuTab = createMenuBtn();
-        const contactTab = createContactBtn();
-
-        navSection.appendChild(homeTab);
-        navSection.appendChild(menuTab);
-        navSection.appendChild(contactTab);
-
-        return navSection;
-    }
-
-    return { createTabSection };
-})();
 
 const CharacterBios = (() => {
     const createBio = (outerDivName, innerDivName, imgSrc, imgId, personName) => {

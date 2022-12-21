@@ -1,14 +1,16 @@
-import { MainElements, OtherElements } from "./elements-builder";
+import { MainElements, OtherElements, Tabs } from "./elements-builder";
 
 const ContactElements = (() => {
     const createContactHeader = () => {
         const header = MainElements.createHeader();
         
-        const contactH1 = OtherElements.createH1("Contact Us");
+        const contactNavBar = Tabs.createTabSection();
         const headerLine = OtherElements.createLine("header-line");
+        const contactH1 = OtherElements.createH1("Contact Us");
 
-        header.appendChild(contactH1);
+        header.appendChild(contactNavBar);
         header.appendChild(headerLine);
+        header.appendChild(contactH1);
         
         return header;
     }

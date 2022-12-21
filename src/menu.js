@@ -15,7 +15,7 @@ const MenuElements = (() => {
     }
 
     const createMenuDish = (dishName, description) => {
-        const newDish = OtherElements.createDiv("salad");
+        const newDish = OtherElements.createDiv("menu-item");
         
         const dishTitle = OtherElements.createH3(dishName);
         const dishDescription = OtherElements.createPara(description);

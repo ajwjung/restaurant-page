@@ -18,11 +18,13 @@ const ContactElements = (() => {
         const main = MainElements.createMain();
         const mainContainer = OtherElements.createDiv("contact-info");
     
-        const contactPara = OtherElements.createPara("We look forward to serving you. If you have any questions or would like to book a reservation, please reach out to us.")
+        const contactPara1 = OtherElements.createH3("We look forward to serving you.");
+        const contactPara2 = OtherElements.createPara("If you have any questions or would like to book a reservation, please reach out to us.")
         const contactPhone = OtherElements.createPara("111-111-1111");
         const contactEmail = OtherElements.createPara("info@gusteaus.com");
 
-        mainContainer.appendChild(contactPara);
+        mainContainer.appendChild(contactPara1);
+        mainContainer.appendChild(contactPara2);
         mainContainer.appendChild(contactPhone);
         mainContainer.appendChild(contactEmail);
         main.append(mainContainer);

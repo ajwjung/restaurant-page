@@ -20,7 +20,19 @@ const MainElements = (() => {
         return newSection;
     }
 
-    return { createHeader, createNav, createMain, createSection }
+    const createFooter = () => {
+        const newFooter = document.createElement("footer");
+
+        const footerLine = OtherElements.createLine("footer-line");
+        const footerNote = OtherElements.createPara("Copyright © 2022 Amy Jung");
+
+        newFooter.appendChild(footerLine);
+        newFooter.appendChild(footerNote);
+
+        return newFooter;
+    }
+
+    return { createHeader, createNav, createMain, createSection, createFooter }
 })();
 
 const OtherElements = (() => {

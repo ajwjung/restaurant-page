@@ -61,7 +61,9 @@ header,
 .dividers,
 .chefs-info,
 .reviews,
-.reviews-container {
+.reviews-container,
+.menu-item,
+.contact-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +75,9 @@ header,
 }
 
 header,
-.reviews {
+.reviews,
+.menu-item,
+.contact-info {
     flex-direction: column;
 }
 
@@ -118,21 +122,16 @@ header,
     transform: translateX(-40%) translateY(5%);
 }
 
-/* Menu Page */
+/* Menu & Contact Pages */
 .starters,
 .entrees,
-.desserts {
+.desserts,
+.contact-info {
     width: 100%;
-    text-align: center;
 }
 
-.menu-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-item > p {
+.menu-item > p,
+.contact-info > p {
     width: 70%;
+    text-align: center;
 }

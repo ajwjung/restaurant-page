@@ -5,39 +5,29 @@ import "./style.css";
 
 const RenderPage = (() => {
     HomePage.renderHome();
-
+    
     const clearContent = () => {
         const content = document.querySelector("#content");
-        console.log(content.childNodes);
         
         while (content.firstChild) {
-            console.log(`Removing ${content.lastChild.nodeName}...`);
             content.removeChild(content.lastChild);
-            console.log(`Successfully removed!`)
         }
-    }
+    };
 
-    const homeBtn = document.body.querySelector("#home-tab");
-    homeBtn.addEventListener("click", function() {
-        console.log("This is the home button!")
-        clearContent();
-        console.log("Cleared the page!");
-        HomePage.renderHome();
-        console.log("Home page rendered!");
-    });
+    const handler = (tab) => {
+        if (tab == "home-tab") {
+            HomePage.renderHome();
+        } else if (tab == "menu-tab") {
+            MenuPage.renderMenu();
+        } else if (tab == "contact-tab") {
+            ContactPage.renderContact();
+        }
+    };
 
-    const menuBtn = document.body.querySelector("#menu-tab");
-    menuBtn.addEventListener("click", function() {
-        console.log("This is the menu button!")
+    const btns = document.body.querySelectorAll("button");
+    btns.forEach(btn => btn.addEventListener("click", function(e) {
         clearContent();
-        MenuPage.renderMenu();
-    });
-
-    const contactBtn = document.body.querySelector("#contact-tab");
-    contactBtn.addEventListener("click", function() {
-        console.log("This is the contact button!")
-        clearContent();
-        ContactPage.renderContact();
-    });
+        handler(btn.id);
+    }));
 
 })();

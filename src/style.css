@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&display=swap');
+
 :root {
     --main-bg-clr: rgb(12, 22, 53);
     --img-bg-clr: rgb(68, 0, 20);
     --font-clr: rgb(226, 175, 64);
-    --h1-font-size: 3rem;
+    --h1-font-size: 3.5rem;
     --h2-font-size: 2rem;
-    --quote-font-size: 1.2rem;
+    --quote-font-size: 1.5rem;
+    --small-font-size: 1.2rem;
     --header-margin: 2rem 0;
-    --nav-font-size: 1rem;
     --full-width: 100vw;
     --text-alignment: center;
 }
 
 * {
     color: var(--font-clr);
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 0.1rem;;
 }
 
 body {
@@ -50,6 +54,10 @@ h2 {
 
 h3 {
     font-size: var(--quote-font-size);
+}
+
+p {
+    font-size: var(--small-font-size);
 }
 
 hr {
@@ -139,7 +147,7 @@ nav,
     background: transparent;
     border: 0;
     border-radius: 10px;
-    font-size: var(--nav-font-size);
+    font-size: var(--small-font-size);
     text-transform: uppercase;
     font-weight: 600;
 }

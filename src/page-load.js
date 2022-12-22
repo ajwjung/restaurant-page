@@ -26,15 +26,10 @@ const PageElements = (() => {
     const createHeaderSection = () => {
         const header = MainElements.createHeader();
 
-        // const restaurantLogo = OtherElements.createImage(Gusteau);
-        // const logoWrapper = OtherElements.createDiv("logo-container");
-        // restaurantLogo.setAttribute("id", "gusteau-logo");
         const navBar = Tabs.createTabSection();
         const headerLine = OtherElements.createLine("header-line");
         const restaurantName = OtherElements.createH1("Gusteau's");
         
-        // logoWrapper.appendChild(restaurantLogo);
-        // header.appendChild(logoWrapper);
         header.appendChild(navBar);
         header.appendChild(headerLine);
         header.appendChild(restaurantName);

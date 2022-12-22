@@ -17,22 +17,26 @@ const RenderPage = (() => {
     };
 
     const handler = (tab) => {
-        clearContent();
-
         switch (tab) {
             case "home-tab":
+                clearContent();
                 HomePage.renderHome();
                 break;
             case "menu-tab":
+                clearContent();
                 MenuPage.renderMenu();
                 break;
             case "contact-tab":
+                clearContent();
                 ContactPage.renderContact();
+                break;
+            default:
+                break;
         }
     };
 
     content.addEventListener("click", function(e) {
         handler(e.target.id);
-    });
+    })
 
 })();

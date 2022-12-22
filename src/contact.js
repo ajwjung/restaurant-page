@@ -41,10 +41,12 @@ const Contact = (() => {
     const content = document.querySelector("#content");
 
     const contactHeader = ContactElements.createContactHeader();
+    const dividerLine = OtherElements.createLine("divider");
     const contactMain = ContactElements.createContactMain();
     const contactFooter = MainElements.createFooter();
     
     content.appendChild(contactHeader);
+    content.appendChild(dividerLine);
     content.appendChild(contactMain);
     content.appendChild(contactFooter);
 })();

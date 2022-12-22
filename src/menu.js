@@ -107,10 +107,12 @@ const Menu = (() => {
     const content = document.querySelector("#content");
 
     const menuHeader = MenuElements.createMenuHeader();
+    const dividerLine = OtherElements.createLine("divider");
     const menuMain = MenuElements.createMenuMain();
     const menuFooter = MainElements.createFooter();
 
     content.appendChild(menuHeader);
+    content.appendChild(dividerLine);
     content.appendChild(menuMain);
     content.appendChild(menuFooter);
 

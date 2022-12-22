@@ -84,7 +84,7 @@ header {
 }
 
 main {
-    min-height: calc(100vh - 30vh - 15vh); /* minus header + footer */
+    min-height: 50vh
 }
 
 nav {
@@ -197,7 +197,9 @@ header,
 .entrees,
 .desserts,
 .contact-info {
+    height: 100%;
     width: var(--full-width);
+    margin: 4rem 0;
 }
 
 .menu-item > p,

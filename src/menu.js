@@ -103,19 +103,23 @@ const MenuElements = (() => {
 })();
 
 
-const Menu = (() => {
-    const content = document.querySelector("#content");
+const MenuPage = (() => {
+    const renderMenu = () => {
+        const content = document.querySelector("#content");
+    
+        const menuHeader = MenuElements.createMenuHeader();
+        const dividerLine = OtherElements.createLine("divider");
+        const menuMain = MenuElements.createMenuMain();
+        const menuFooter = MainElements.createFooter();
+    
+        content.appendChild(menuHeader);
+        content.appendChild(dividerLine);
+        content.appendChild(menuMain);
+        content.appendChild(menuFooter);
+    }
 
-    const menuHeader = MenuElements.createMenuHeader();
-    const dividerLine = OtherElements.createLine("divider");
-    const menuMain = MenuElements.createMenuMain();
-    const menuFooter = MainElements.createFooter();
-
-    content.appendChild(menuHeader);
-    content.appendChild(dividerLine);
-    content.appendChild(menuMain);
-    content.appendChild(menuFooter);
+    return { renderMenu };
 
 })();
 
-export default Menu;
+export default MenuPage;

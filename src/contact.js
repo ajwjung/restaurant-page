@@ -37,18 +37,22 @@ const ContactElements = (() => {
 
 })();
 
-const Contact = (() => {
-    const content = document.querySelector("#content");
-
-    const contactHeader = ContactElements.createContactHeader();
-    const dividerLine = OtherElements.createLine("divider");
-    const contactMain = ContactElements.createContactMain();
-    const contactFooter = MainElements.createFooter();
+const ContactPage = (() => {
+    const renderContact = () => {
+        const content = document.querySelector("#content");
     
-    content.appendChild(contactHeader);
-    content.appendChild(dividerLine);
-    content.appendChild(contactMain);
-    content.appendChild(contactFooter);
+        const contactHeader = ContactElements.createContactHeader();
+        const dividerLine = OtherElements.createLine("divider");
+        const contactMain = ContactElements.createContactMain();
+        const contactFooter = MainElements.createFooter();
+        
+        content.appendChild(contactHeader);
+        content.appendChild(dividerLine);
+        content.appendChild(contactMain);
+        content.appendChild(contactFooter);
+    }
+
+    return { renderContact };
 })();
 
-export default Contact;
+export default ContactPage;

@@ -85,25 +85,29 @@ const PageElements = (() => {
     return { createHeaderSection, createChefSection, createReviewSection };
 })();
 
-const Page = (() => {
-    const content = document.querySelector("#content");
-
-    const header = PageElements.createHeaderSection();
-    const main = MainElements.createMain();
-    const firstLine = OtherElements.createLine("divider");
-    const reviewsMain = PageElements.createReviewSection();
-    const secondLine = OtherElements.createLine("divider");
-    const chefsMain = PageElements.createChefSection();
-    const footer = MainElements.createFooter();
+const HomePage = (() => {
+    const renderHome = () => {
+        const content = document.querySelector("#content");
     
-    main.appendChild(firstLine);
-    main.appendChild(reviewsMain);
-    main.appendChild(secondLine);
-    main.appendChild(chefsMain);
-    content.appendChild(header);
-    content.appendChild(main);
-    content.appendChild(footer);
+        const header = PageElements.createHeaderSection();
+        const main = MainElements.createMain();
+        const firstLine = OtherElements.createLine("divider");
+        const reviewsMain = PageElements.createReviewSection();
+        const secondLine = OtherElements.createLine("divider");
+        const chefsMain = PageElements.createChefSection();
+        const footer = MainElements.createFooter();
+        
+        main.appendChild(firstLine);
+        main.appendChild(reviewsMain);
+        main.appendChild(secondLine);
+        main.appendChild(chefsMain);
+        content.appendChild(header);
+        content.appendChild(main);
+        content.appendChild(footer);
+    }
+
+    return { renderHome };
 
 })();
 
-export default Page;
+export default HomePage;

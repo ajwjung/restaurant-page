@@ -4,8 +4,10 @@ import ContactPage from "./contact";
 import "./style.css";
 
 const RenderPage = (() => {
+    const content = document.querySelector("#content");
+
     HomePage.renderHome();
-    
+   
     const clearContent = () => {
         const content = document.querySelector("#content");
         
@@ -15,19 +17,22 @@ const RenderPage = (() => {
     };
 
     const handler = (tab) => {
-        if (tab == "home-tab") {
-            HomePage.renderHome();
-        } else if (tab == "menu-tab") {
-            MenuPage.renderMenu();
-        } else if (tab == "contact-tab") {
-            ContactPage.renderContact();
+        clearContent();
+
+        switch (tab) {
+            case "home-tab":
+                HomePage.renderHome();
+                break;
+            case "menu-tab":
+                MenuPage.renderMenu();
+                break;
+            case "contact-tab":
+                ContactPage.renderContact();
         }
     };
 
-    const btns = document.body.querySelectorAll("button");
-    btns.forEach(btn => btn.addEventListener("click", function(e) {
-        clearContent();
-        handler(btn.id);
-    }));
+    content.addEventListener("click", function(e) {
+        handler(e.target.id);
+    });
 
 })();

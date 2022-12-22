@@ -8,6 +8,7 @@
     --header-margin: 2rem 0;
     --nav-font-size: 1rem;
     --full-width: 100vw;
+    --text-alignment: center;
 }
 
 * {
@@ -15,14 +16,27 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
     margin: 0 auto;
     background: var(--main-bg-clr);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+header,
+footer,
+.alfredo,
+.remy,
+.ego,
+.menu-item > p,
+.contact-info > p {
+    text-align: var(--text-alignment);
 }
 
 h1,
 h2 {
-    text-align: center;
     margin: var(--header-margin);
 }
 
@@ -47,7 +61,6 @@ hr {
 .footer-line {
     width: 85%;
     height: 2px;
-    line-height: 50px;
 }
 
 .divider {
@@ -67,6 +80,11 @@ footer,
 
 header {
     height: 30vh;
+    margin-top: auto;
+}
+
+main {
+    min-height: calc(100vh - 30vh - 15vh); /* minus header + footer */
 }
 
 nav {
@@ -75,13 +93,8 @@ nav {
     gap: 4rem;
 }
 
-main {
-    margin: var(--header-margin);
-}
-
 footer {
     height: 15vh;
-    text-align: center;
 }
 
 .footer-container {
@@ -144,12 +157,6 @@ header,
     flex-direction: column;
 }
 
-.alfredo,
-.remy,
-.ego {
-    text-align: center;
-}
-
 .alfredo-container,
 .remy-container,
 .ego-container {
@@ -196,5 +203,4 @@ header,
 .menu-item > p,
 .contact-info > p {
     width: 70%;
-    text-align: center;
 }

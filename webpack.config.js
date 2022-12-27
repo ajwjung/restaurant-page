@@ -14,7 +14,7 @@ module.exports = {
         }),
     ],
     output: {
-        filename: "bundle.js",
+        filename: "main.js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
@@ -26,7 +26,15 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource",
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[hash].[ext]",
+                            outputPath: "imgs",
+                        },
+                    },
+                ],
             },
         ],
     },

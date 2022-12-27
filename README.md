@@ -14,6 +14,17 @@ To practice DOM manipulation by dynamically rendering a simple restaurant homepa
 
 3. DOM elements should be created using JavaScript, but the `content` div can be kept in HTML
 
+## Built With
+
+* HTML5
+* CSS3
+* Vanilla JS
+* [Webpack](https://webpack.js.org/)
+
+## Navigating the Page
+
+This fake restaurant page was designed to be used with tab browsing. My page features three tabs: Home, Menu, and Contact. You can click on each tab to navigate between each of those pages to view their respective content.
+
 ## Image Credits
 My restaurant page's theme is Disney's 2007 film, Ratatouille. I am not affiliated with Disney in any way, all characters belong to them.
 

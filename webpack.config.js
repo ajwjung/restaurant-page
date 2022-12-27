@@ -7,12 +7,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Restaurant Page",
+            title: "Gusteau's",
             template: "./src/index.html",
         }),
     ],
     output: {
-        filename: "main.js",
+        filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },

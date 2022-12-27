@@ -1,7 +1,7 @@
 import HomePage from "./modules/page-load";
 import MenuPage from "./modules/menu";
 import ContactPage from "./modules/contact";
-import "./style.css";
+import "./styles/style.css";
 
 const RenderPage = (() => {
     const content = document.querySelector("#content");

@@ -1,6 +1,6 @@
-import HomePage from "./page-load";
-import MenuPage from "./menu";
-import ContactPage from "./contact";
+import HomePage from "./modules/page-load";
+import MenuPage from "./modules/menu";
+import ContactPage from "./modules/contact";
 import "./style.css";
 
 const RenderPage = (() => {

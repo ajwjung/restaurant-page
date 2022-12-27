@@ -1,7 +1,7 @@
 import { MainElements, OtherElements, Tabs } from "./elements-builder";
-import Alfredo from "./imgs/alfredo-linguini.png";
-import Remy from "./imgs/remy.png";
-import Ego from "./imgs/anton-ego.png";
+import Alfredo from "../imgs/alfredo-linguini.png";
+import Remy from "../imgs/remy.png";
+import Ego from "../imgs/anton-ego.png";
 
 const CharacterBios = (() => {
     const createBio = (outerDivName, innerDivName, imgSrc, imgId, personName) => {

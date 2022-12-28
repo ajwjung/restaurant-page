@@ -1,5 +1,7 @@
 # Restaurant Page
 
+* <font size="4">[Live Demo](https://ajwjung.github.io/restaurant-page/)</font>
+
 ## Objective
 
 To practice DOM manipulation by dynamically rendering a simple restaurant homepage. Full project details can be found at [The Odin Project's page](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page).

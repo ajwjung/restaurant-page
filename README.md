@@ -1,6 +1,6 @@
 # Restaurant Page
 
-* <font size="4">[Live Demo](https://ajwjung.github.io/restaurant-page/)</font>
+* <font size="4">[Live Demo](https://ajwjung.github.io/restaurant-page/index.html)</font>
 
 ## Objective
 

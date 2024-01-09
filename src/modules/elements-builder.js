@@ -1,3 +1,5 @@
+import GitHubLogo from "../imgs/github.svg";
+
 const MainElements = (() => {
     const createHeader = () => {
         const newHeader = document.createElement("header");
@@ -25,8 +27,15 @@ const MainElements = (() => {
 
         const footerLine = OtherElements.createLine("footer-line");
         const noteContainer = OtherElements.createDiv("footer-container");
-        const footerNote = OtherElements.createPara("Copyright © 2022 Amy Jung");
+        const iconContainer = document.createElement("a");
+        const githubIcon = OtherElements.createImage(GitHubLogo);
+        const footerNote = OtherElements.createPara("Created by Amy Jung");
 
+        iconContainer.setAttribute("href", "https://github.com/ajwjung/restaurant-page")
+        githubIcon.classList.add("github-icon");
+
+        iconContainer.appendChild(githubIcon);
+        noteContainer.appendChild(iconContainer);
         noteContainer.appendChild(footerNote);
         newFooter.appendChild(footerLine);
         newFooter.appendChild(noteContainer);

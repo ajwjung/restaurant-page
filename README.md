@@ -40,6 +40,8 @@ Below are the links where I found each image:
 [2]: https://hero.fandom.com/wiki/Alfredo_Linguini
 [3]: https://hero.fandom.com/wiki/Remy_(Ratatouille)
 
+The github logo was free to use from Pictogrammers' [Material Design Icons](https://pictogrammers.com/library/mdi/).
+
 ## Author's Notes
 
 I still need to practice using webpack more, but this was a great introduction to using webpack and modules. I mainly found it challenging to make the tabs work because most of the page contents are created dynamically. This means the event listeners won't work the same way they do for normal elements created in HTML. I found that adding the event listener to the existing `content` div made all tabs functional.
